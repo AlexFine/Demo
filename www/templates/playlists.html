@@ -14,7 +14,7 @@
 -->
         <div  class="ride" >
             <a  href="#">
-              <div  class="cover" style="background-image:url('img/text3.JPG'); ">
+              <div  class="cover" style="background-image:url('img/Golden.JPG'); ">
                   <!--use contian for background cover -->
               </div>
 
@@ -38,7 +38,7 @@
                       <h1 ng-if="names">{{playlist.time}}</h1>
 <!--                    <a ng-click="apple()"><i style="font-size:40px; color:white;" class="ion-ios-plus-outline"></i></a>-->
                       
-                      <p class="largeText">{{playlist.dropoff}} ... </p>
+                      <p class="largeText">{{playlist.dropoff.substring(0,45)}} ... </p>
                       <p class="dateText">
                         {{playlist.pickup}}
                       </p>
@@ -52,6 +52,7 @@
                   </div>
               </div>
             </a>
+            <hr>
         </div>
   </ion-content>
 </ion-view>

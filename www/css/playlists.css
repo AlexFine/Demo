@@ -39,10 +39,7 @@ h1{
 }
 .largeText{
     font-size:20px;
-    line-height: 1.2em;
-    height: 2.4em;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
 }
 .dateText{
     font-size:14px;

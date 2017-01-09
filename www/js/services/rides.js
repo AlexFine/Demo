@@ -43,7 +43,7 @@ angular.module('ridesService', ['ionic'])
         date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Golden.jpg',
+        image: 'img/text6.jpg',
         face: 'img/xio.jpg',
         dropoff: 'The close relationship between Israel and the United States was born out of Cold War tensions projected onto the regional conflict in the Middle East. The U.S., implementing its policy of containment at the time, was competing with the Soviet Union for influence in regions around the world.',
         pickup: '01/06/2016',
@@ -57,7 +57,7 @@ angular.module('ridesService', ['ionic'])
         date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, false, false, false, false, false, false],
-        image: 'img/Art.jpg',
+        image: 'img/text5.jpg',
         face: 'img/oliver.jpg',
         dropoff: 'The Contennial Commission preferred to present the Civil War as, in essence, a kind of colorful and good-natured regional athletic rivalry between two groups of freedom-loving white Americans. Americans of all regions and political persuasions invoked imagery of the Civil War - to illustrate what divided rather than united the nation. ',
         pickup: '01/09/2016',
@@ -70,11 +70,11 @@ angular.module('ridesService', ['ionic'])
         date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Land.jpg',
+        image: 'img/text4.jpg',
         face: 'img/maiyio.JPG',
-        dropoff: '680 Point Lobos Ave, San Francisco, CA 94121',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Black', 'African American', 'San Francisco', 'Straight', 'He/Him', 'Cis-Gender', 'Takis'],
+        dropoff: 'Girls were growing up in America without ever having jobs outside the home. The suburban housewife – she was the dream image of the young American women and the envy, it was said, of women all over the world.',
+        pickup: '01/09/2016',
+        race: ['The proportion of women attending college in comparison with men dropped from 47% in 1920 to 35% in 1958', 'Fourteen million girls were engaged by 17.', 'Statisticians were especially astounded at the fantastic increase in the number of babies among college women.'],
 				key: 'ABCDEFG'
       }
     ];

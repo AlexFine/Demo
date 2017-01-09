@@ -1,5 +1,6 @@
 <ion-view view-title="{{playlists[lastChar-1].time}}" ng-init="initMap()">
   <ion-content>
+<!--
     <div class="bluebar" scroll="false">
         <div class="row">
             <div class="col col-50 onebaractive" ng-if="oneOn">
@@ -16,13 +17,34 @@
             </div>
         </div>
     </div>
-        <div ng-if="oneOn">
+-->
+        <div>
           <!-- General settings -->
-          <ul class="list">
-              <li class="item" ng-repeat="i in playlists[lastChar-1].race">
-                {{i}} 
+            <p class="newtext" style="text-align:center;">
+                <b>{{playlists[lastChar-1].time}}</b><br>
+                {{playlists[lastChar-1].pickup}}
+            </p>
+            <hr>
+            <p class="newtext">
+                <b><u>Summary</u></b><br>
+            {{playlists[lastChar-1].dropoff}}
+            </p>
+            <hr>
+            <p class="newtext">
+                <b><u>Key Facts</u></b>
+                <ul class="list" style="margin-top:0px;">
+                    
+              <li class="newitem" ng-repeat="i in playlists[lastChar-1].race">
+                • {{i}} 
               </li>
           </ul>
+            
+            </p>
+            <hr>
+          <p class="newtext">
+                
+            Use Quill at quillapp.io to see a more in-depth analysis of {{playlists[lastChar-1].time}}.
+            </p>
 
 
           <!-- <div class="row repeated-day-picker">
