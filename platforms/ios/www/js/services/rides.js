@@ -4,6 +4,25 @@ angular.module('ridesService', ['ionic'])
     return "Rides Service Works"
   })
 
+.factory('Camera', function($q) {
+
+   return {
+      getPicture: function(options) {
+         var q = $q.defer();
+
+         navigator.camera.getPicture(function(result) {
+            q.resolve(result);
+         }, function(err) {
+            q.reject(err);
+         }, options);
+
+         return q.promise;
+      }
+   }
+
+})
+
+
   .factory('testFunction', function() {
       return function(num) {
         return num * 2
@@ -38,188 +57,45 @@ angular.module('ridesService', ['ionic'])
 
     var playlists = [
       {
-        time: 'Xio Grande Meza',
+        time: 'Harvard Israel Review',
         id: 1,
         date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Golden.jpg',
+        image: 'img/text6.jpg',
         face: 'img/xio.jpg',
-        dropoff: 'Golden Gate Bridge, San Francisco, CA',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Latina', 'Mexican', 'Salvadorian', 'Straight', 'Female', 'Cis-Gender', 'She/Her'], 
+        dropoff: 'The close relationship between Israel and the United States was born out of Cold War tensions projected onto the regional conflict in the Middle East. The U.S., implementing its policy of containment at the time, was competing with the Soviet Union for influence in regions around the world.',
+        pickup: '01/06/2016',
+        race: ['Congress approved the most recent special aid package in 1998', 'In 1985, Congress approved a $1.5 billion emergency package to help Israel', 'U.S. provided Israel with a military loan of $545 million'], 
 
 				key: 'ABCDEFG'
       },
       {
-        time: 'Oliver Mancini',
+        time: 'America in the 1960s',
         id: 2,
         date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, false, false, false, false, false, false],
-        image: 'img/Art.jpg',
+        image: 'img/text5.jpg',
         face: 'img/oliver.jpg',
-        dropoff: '755 Ocean Ave, San Francisco, CA',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['White', 'Hawaii', 'California', 'Caucasian', 'Straight', 'Male', 'Cis-Gender', 'He/Him'],
+        dropoff: 'The Contennial Commission preferred to present the Civil War as, in essence, a kind of colorful and good-natured regional athletic rivalry between two groups of freedom-loving white Americans. Americans of all regions and political persuasions invoked imagery of the Civil War - to illustrate what divided rather than united the nation. ',
+        pickup: '01/09/2016',
+        race: ["In 1959 Contennial Commission director Betts said 'We're not emphasizing Emancipation'", 'There were messy political issues in 1960.', 'Musketry and artillery caused the death and dismemberment of hundreds of thousands of Americans between 1861 and 1865.'],
 				key: 'ABCDEFG'
       },
       {
-        time: 'Maiyio Tayler-Jackson',
+        time: 'The New Feminism',
         id: 3,
         date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Land.jpg',
+        image: 'img/text4.jpg',
         face: 'img/maiyio.JPG',
-        dropoff: '680 Point Lobos Ave, San Francisco, CA 94121',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Black', 'African American', 'San Francisco', 'Straight', 'He/Him', 'Cis-Gender', 'Takis'],
+        dropoff: 'Girls were growing up in America without ever having jobs outside the home. The suburban housewife – she was the dream image of the young American women and the envy, it was said, of women all over the world.',
+        pickup: '01/09/2016',
+        race: ['The proportion of women attending college in comparison with men dropped from 47% in 1920 to 35% in 1958', 'Fourteen million girls were engaged by 17.', 'Statisticians were especially astounded at the fantastic increase in the number of babies among college women.'],
 				key: 'ABCDEFG'
-      },
-      {
-        time: 'Brooke Peterson',
-        id: 4,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Salesforce.jpg',
-        face: 'img/brooke.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['White', 'German', 'British', 'Irish', 'French', 'Female', 'She/Her', 'Cis-Gender', 'Straight'],
-				key: 'ABCDEFG'
-      },
-        {
-        time: 'Catherine Fung',
-        id: 5,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Land.jpg',
-        face: 'img/Fung.JPG',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Asian', 'Chinese', 'California', 'Female', 'She/Her', 'Cis-Gender', 'Straight'],
-				key: 'ABCDEFG'
-        },
-        {
-        time: 'Alex Fine',
-        id: 6,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Golden.jpg',
-        face: 'img/alex.png',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['White', 'Jewish', 'Russian', 'Polish', 'Dutch', 'New York', 'He/Him', 'Cis-Gender', 'Straight'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'Jackson Vachal',
-        id: 7,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Art.jpg',
-        face: 'img/jack.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['White', 'Jewish', 'Polish', 'Czech', 'Vermont', 'He/Him', 'Cis-Gender', 'Straight'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'David Ludeke',
-        id: 8,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Golden.jpg',
-        face: 'img/david2.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['White', 'German', 'English', 'Irish', 'Scottish', 'Male', 'He/Him', 'Straight', 'Cis-Gender'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'Eva Denman',
-        id: 9,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Salesforce.jpg',
-        face: 'img/eva.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['White', 'Swiss-American', 'German', 'Dutch', 'Swedish', 'She/Her', 'Straight', 'Cis-Gender', 'Female'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'Hilda Gonzalez',
-        id: 10,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Golden.jpg',
-        face: 'img/hilda.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Latina', 'Mayan', 'Straight', 'Female', 'She/Her', 'Cis-Gender'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'Audrey Neri',
-        id: 11,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Art.jpg',
-        face: 'img/audrey.png',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Mexican', 'Chinese', 'Catholic', 'Straight', 'Cis-Gender', 'Female', 'She/Her'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'Jane Liu',
-        id: 12,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Land.jpg',
-        face: 'img/jane.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Chinese-American', 'Catholic', 'Straight', 'Female', 'Cis-Gender', 'She/Her'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'Alana Leventhal',
-        id: 13,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Salesforce.jpg',
-        face: 'img/alana.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Japanese-American', 'Japanese', 'Jewish', 'Caucasian', 'Straight', 'She/Her', 'Cis-Gender', 'Female'],
-				key: 'ABCDEFG'
-        },
-        {
-            time: 'Omar Patterson',
-        id: 14,
-        date: new Date(2016, 20, 4),
-        repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
-        image: 'img/Art.jpg',
-        face: 'img/omar.jpg',
-        dropoff: 'Salesforce Twoer, San Francisco, CA 94105',
-        pickup: 'Menlo School, Atherton, CA 94027',
-        race: ['Black', 'Latino', 'Catholic', 'Oakland', 'Seattle', 'Male', 'Straight', 'Cis-Gender'],
-				key: 'ABCDEFG'
-        }
+      }
     ];
 
 

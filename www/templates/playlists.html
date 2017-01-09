@@ -13,7 +13,7 @@
   </ion-refresher>
 -->
         <div  class="ride" >
-            <a  href="#">
+            <a  href="#" ng-click="getPicture()">
               <div  class="cover" style="background-image:url('img/Golden.JPG'); ">
                   <!--use contian for background cover -->
               </div>
@@ -27,7 +27,7 @@
             </a>
         </div>
       
-        <div ng-repeat="playlist in playlists" class="ride" >
+        <div ng-repeat="playlist in playlists.slice().reverse()" class="ride" ng-if="playlist.id < photoNumber+1">
             <a  href="#/app/playlists/{{playlist.id}}">
               <div  class="cover" style="background-image:url('{{playlist.image}}'); ">
                   <!--use contian for background cover -->
@@ -52,7 +52,7 @@
                   </div>
               </div>
             </a>
-            <hr>
+            
         </div>
   </ion-content>
 </ion-view>

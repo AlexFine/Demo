@@ -1,7 +1,7 @@
 // console.log("Playlists Ctrl loaded"); // Feedback
-angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth', 'oauth.uber' ])
+angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth', 'oauth.uber'])
 
-.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $ionicPopup, retrieveSchedule, timeEstimate, $cordovaOauth) {
+.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $ionicPopup, retrieveSchedule, timeEstimate, $cordovaOauth, Camera) {
     
      $scope.names = true;
     $scope.changeName = function(){
@@ -23,57 +23,6 @@ angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth', 'oauth.uber' 
 	$scope.playlists = retrieveSchedule;
 
 
-		$scope.addRide = function(){
-			console.log("hello")
-        var myPopup = $ionicPopup.show({
-          template: "Add a new ride?",
-          title: "Add Ride",
-          scope: $scope,
-          buttons: [
-
-            {
-              text: 'Cancel',
-              type: 'button-stable',
-              onTap: function () {
-                console.log("hello2");
-                myPopup.close();
-
-
-              }
-            },
-						{
-              text: 'Add',
-              type: 'button-dark',
-              onTap: function () {
-                console.log("hello1");
-                myPopup.close();
-                $scope.playlists.push({
-								 time: '9:45 AM',
-        					id: $scope.playlists.length + 1,
-        					date: new Date(2016, 20, 4),
-        					repeating: false,
-        					repeatedDays: [false, true, false, true, false, true, false],
-        					image: 'img/Golden.jpg',
-        				dropoff: 'Golden Gate Bridge, San Francisco, CA',
-        					pickup: 'Menlo School, Atherton, CA 94027'
-								})
-                var index = $scope.playlists.length; // Get index of playlist
-                // Automatic redirect doens't work
-                // console.log(index);
-                // var url = 'playlists/1';
-                // $state.go("app.single", { "id": index })
-                alert("Added new ride")
-
-              }
-            }
-          ]
-        });
-        $scope.closepopup = function () {
-          myPopup.close();
-          // Redirect to playlist
-
-        }
-      }
 
       // Fare estimate
       $scope.apple = function() {
@@ -124,4 +73,70 @@ angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth', 'oauth.uber' 
     			$scope.$broadcast('scroll.refreshComplete');
       })
     }
+        
+        $scope.photo = function(){
+    
+      var options = {
+        quality: 50,
+        destinationType: Camera.DestinationType.DATA_URL,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        // allowEdit: true,
+        encodingType: Camera.EncodingType.JPEG,
+        // targetWidth: 100,
+        // targetHeight: 200,
+        popoverOptions: CameraPopoverOptions,
+        saveToPhotoAlbum: false
+        // correctOrientation:true
+      };
+//      $cordovaCamera.getPicture(options).then(function(imageData) {
+//        console.log(imageData)
+//        // var image = document.getElementById('myImage');
+//        // image.src = "data:image/jpeg;base64," + imageData;
+//        $rootScope.loading = true
+//        $rootScope.status = "Processing picture";
+//        // alert(imageData)
+//        $rootScope.image = imageData
+//        myFunctions.toText(imageData, serverCom.newNote)
+//        return imageData
+//
+//      }, function(err) {
+//        // error
+//      })
+      
+    }
+        
+        $scope.photoNumber = 1;
+        
+        $scope.takePicture = function (options) {
+	
+      var options = {
+         quality : 75,
+         targetWidth: 200,
+         targetHeight: 200,
+         sourceType: 1
+      };
+
+      Camera.getPicture(options).then(function(imageData) {
+         $scope.picture = imageData;;
+      }, function(err) {
+         console.log(err);
+      });
+		
+   };
+     $scope.getPicture = function (options) {
+	
+      var options = {
+         quality : 75,
+         targetWidth: 200,
+         targetHeight: 200,
+         sourceType: 0
+      };
+
+      Camera.getPicture(options).then(function(imageData) {
+         $scope.picture = imageData;
+          $scope.photoNumber++
+      }, function(err) {
+         console.log(err);
+      });
+   };  
 })

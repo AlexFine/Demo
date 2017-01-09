@@ -1,4 +1,4 @@
-<ion-view view-title="The Codification of People">
+<ion-view view-title="Quill">
 <!--
 <ion-nav-buttons  side="right">
 		<a ng-click="addRide()"><i style="font-size:30px; color:white; margin-right: 6px;" class="ion-plus"></i></a>
@@ -12,23 +12,39 @@
     on-refresh="strawberry()">
   </ion-refresher>
 -->
-        <button class="button button-calm button-block button-outline" ng-click="changeName()" style="width:90%; margin-left:5%;">
-            <span ng-if="names">Hide</span><span ng-if="!names">Show</span> Names 
-        </button>
-        <div ng-repeat="playlist in playlists" class="ride" >
+        <div  class="ride" >
+            <a  href="#" ng-click="getPicture()">
+              <div  class="cover" style="background-image:url('img/Golden.JPG'); ">
+                  <!--use contian for background cover -->
+              </div>
+
+              <div class="row">
+                  
+                   <div style="margin-left:32%;" class="text col col-60">
+                  <img src="img/devPhoto.png" style="width:50%;">
+                </div>
+              </div>
+            </a>
+        </div>
+      
+        <div ng-repeat="playlist in playlists.slice().reverse()" class="ride" ng-if="playlist.id < photoNumber+1">
             <a  href="#/app/playlists/{{playlist.id}}">
               <div  class="cover" style="background-image:url('{{playlist.image}}'); ">
                   <!--use contian for background cover -->
               </div>
 
               <div class="row">
-                  <div class="text col col-60">
+                  <div class="text col col-80">
                       <h1 ng-if="names">{{playlist.time}}</h1>
 <!--                    <a ng-click="apple()"><i style="font-size:40px; color:white;" class="ion-ios-plus-outline"></i></a>-->
-                      <p class="largeText">{{playlist.race[0]}}, {{playlist.race[1]}}</p>
-                    <p class="largeText">{{playlist.race[2]}}, {{playlist.race[3]}}</p>
+                      
+                      <p class="largeText">{{playlist.dropoff.substring(0,45)}} ... </p>
+                      <p class="dateText">
+                        {{playlist.pickup}}
+                      </p>
+                    
                   </div>
-                  <div class="col col-20"></div>
+                  
                   <div class="text col col-20" style="margin-top:80px;">
                     <p>
                       <i style="font-size:30px;" class="ion-ios-arrow-right"></i>
@@ -36,6 +52,7 @@
                   </div>
               </div>
             </a>
+            
         </div>
   </ion-content>
 </ion-view>

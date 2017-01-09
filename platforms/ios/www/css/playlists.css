@@ -26,11 +26,24 @@
     margin-top:20px;
     margin-left:20px;
 }
+.photoText {
+    height: 100%;
+    transform: translateY(-200px);
+    color:white;
+    margin-top:20px;
+    text-align:center;
+}
 h1{
     color:white;
+    font-size:25px;
 }
 .largeText{
     font-size:20px;
+
+}
+.dateText{
+    font-size:14px;
+    color:rgb(210,210,210);
 }
 .bar-dark{
     background-color:#546E7A !important;
