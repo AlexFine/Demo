@@ -1,0 +1,248 @@
+.form-label {
+  width: 30%;
+  float: left;
+  font-size: 24px;
+  line-height: 24px;
+  color: #00B9E6;
+}
+
+.form-content {
+  width: 70%;
+  float: right;
+}
+
+.time-edit {
+  font-size: 32px !important;
+  line-height: 44px;
+  color: black;
+}
+
+.time-description {
+  font-size: 16px !important;
+  line-height: 32px;
+}
+
+.date-edit {
+  font-size: 24px !important;
+  color: black;
+  line-height: 48px;
+  /*word-wrap: break-word;
+  white-space: pre-wrap !important;*/
+}
+
+.schedule-edit {
+  font-size: 20px !important;
+  line-height: 36px;
+}
+
+.feedback {
+  display: none;
+}
+
+.configure-button {
+  text-align: left;
+  font-size: 20px !important;
+  line-height: 36px;
+}
+
+.button-positive {
+  /*Override default*/
+  background-color: #546E7A !important;
+  color: white !important;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  /*Override default checklist*/
+  background-color: #546E7A !important;
+  border-color: #CFD8DC !important;
+}
+
+.popup-container .popup {
+  /*Override default opacity setting*/
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.loading-spinner {
+  position: absolute;
+  z-index: 9999; /*Always top*/
+  top: 240px;
+  left: 50%;
+  transform: translateX(-37.5px);
+}
+
+.popup-title {
+  font-family: Raleway !important;
+}
+
+.spinner svg {
+  width: 75px;
+  height: 75px;
+}
+
+.fare-estimate {
+  text-align: center;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.ride-details {
+  padding-top: 12px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.location-item {
+  padding-bottom: 20px;
+}
+
+.button-custom {
+  background-color: #546E7A !important;
+  width: 100vw;
+  height: 60px;
+  transform: translateY(-20px);
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.bar {
+  /*Override default*/
+  padding: 0 !important;
+}
+
+.popup {
+  /*Override default*/
+  width: 90% !important;
+}
+
+.popup-title {
+  /*Override default*/
+  font-size: 24px !important;
+}
+
+.popup-sub-title {
+  /*Override default*/
+  font-size: 16px !important;
+}
+
+.day-button {
+  text-align: center;
+  height: 50px;
+  border-radius: 5px;
+  /*border: 1px solid black;*/
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.day-positive {
+  background-color: #B0BEC5;
+}
+
+/*Ionic Date Picker Components*/
+.selected_date_full {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.button_set {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.button_today {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.button_close {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.prev_btn_section {
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.next_btn_section {
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.select_section {
+
+}
+
+.month_select {
+  border-color: #CFD8DC !important; /*Override default styling*/
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.year_select {
+  border-color: #CFD8DC !important; /*Override default styling*/
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.calendar_grid {
+
+}
+
+.weeks_row {
+
+}
+
+.selected_date {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.date_col {
+
+}
+
+.today {
+  border-color: #CFD8DC !important; /*Override default styling*/
+}
+
+/*Ionic Time Picker Components*/
+.ionic_timepicker_popup {
+
+}
+
+.heading {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.time_picker_arrows {
+
+}
+
+.time_picker_box_text {
+
+}
+
+.time_picker_colon {
+
+}
+
+.button_set {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.button_close {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+.search-wrapper-light {
+	font-family:Raleway;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    background: none;
+    border-radius: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.search-wrapper-light input, .search-wrapper-light input::-webkit-input-placeholder {
+	font-family:Raleway;
+    color: #ffffff;
+}

@@ -1,0 +1,41 @@
+<ion-view view-title="The Codification of People">
+<!--
+<ion-nav-buttons  side="right">
+		<a ng-click="addRide()"><i style="font-size:30px; color:white; margin-right: 6px;" class="ion-plus"></i></a>
+	</ion-nav-buttons>
+-->
+
+  <ion-content>
+<!--
+	<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="strawberry()">
+  </ion-refresher>
+-->
+        <button class="button button-calm button-block button-outline" ng-click="changeName()" style="width:90%; margin-left:5%;">
+            <span ng-if="names">Hide</span><span ng-if="!names">Show</span> Names 
+        </button>
+        <div ng-repeat="playlist in playlists" class="ride" >
+            <a  href="#/app/playlists/{{playlist.id}}">
+              <div  class="cover" style="background-image:url('{{playlist.image}}'); ">
+                  <!--use contian for background cover -->
+              </div>
+
+              <div class="row">
+                  <div class="text col col-60">
+                      <h1 ng-if="names">{{playlist.time}}</h1>
+<!--                    <a ng-click="apple()"><i style="font-size:40px; color:white;" class="ion-ios-plus-outline"></i></a>-->
+                      <p class="largeText">{{playlist.race[0]}}, {{playlist.race[1]}}</p>
+                    <p class="largeText">{{playlist.race[2]}}, {{playlist.race[3]}}</p>
+                  </div>
+                  <div class="col col-20"></div>
+                  <div class="text col col-20" style="margin-top:80px;">
+                    <p>
+                      <i style="font-size:30px;" class="ion-ios-arrow-right"></i>
+                    </p>
+                  </div>
+              </div>
+            </a>
+        </div>
+  </ion-content>
+</ion-view>

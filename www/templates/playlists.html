@@ -1,0 +1,57 @@
+<ion-view view-title="Quill">
+<!--
+<ion-nav-buttons  side="right">
+		<a ng-click="addRide()"><i style="font-size:30px; color:white; margin-right: 6px;" class="ion-plus"></i></a>
+	</ion-nav-buttons>
+-->
+
+  <ion-content>
+<!--
+	<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="strawberry()">
+  </ion-refresher>
+-->
+        <div  class="ride" >
+            <a  href="#">
+              <div  class="cover" style="background-image:url('img/text3.JPG'); ">
+                  <!--use contian for background cover -->
+              </div>
+
+              <div class="row">
+                  
+                   <div style="margin-left:32%;" class="text col col-60">
+                  <img src="img/devPhoto.png" style="width:50%;">
+                </div>
+              </div>
+            </a>
+        </div>
+      
+        <div ng-repeat="playlist in playlists" class="ride" >
+            <a  href="#/app/playlists/{{playlist.id}}">
+              <div  class="cover" style="background-image:url('{{playlist.image}}'); ">
+                  <!--use contian for background cover -->
+              </div>
+
+              <div class="row">
+                  <div class="text col col-80">
+                      <h1 ng-if="names">{{playlist.time}}</h1>
+<!--                    <a ng-click="apple()"><i style="font-size:40px; color:white;" class="ion-ios-plus-outline"></i></a>-->
+                      
+                      <p class="largeText">{{playlist.dropoff}} ... </p>
+                      <p class="dateText">
+                        {{playlist.pickup}}
+                      </p>
+                    
+                  </div>
+                  
+                  <div class="text col col-20" style="margin-top:80px;">
+                    <p>
+                      <i style="font-size:30px;" class="ion-ios-arrow-right"></i>
+                    </p>
+                  </div>
+              </div>
+            </a>
+        </div>
+  </ion-content>
+</ion-view>

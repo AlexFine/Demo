@@ -1,0 +1,47 @@
+<ion-view view-title="{{playlists[lastChar-1].time}}" ng-init="initMap()">
+  <ion-content>
+    <div class="bluebar" scroll="false">
+        <div class="row">
+            <div class="col col-50 onebaractive" ng-if="oneOn">
+                <p>Identifiers</p>
+            </div>
+            <div  class="col col-50 onebar"  ng-if="!oneOn"  ng-click="toggleTab()"  >
+                <p><a ng-click="oneOn = !oneOn" style="color:white;">Identifiers</a></p>
+            </div>
+            <div class="col col-50 twobar" ng-if="oneOn" ng-click="toggleTab()" >
+                <p><a ng-click="oneOn = !oneOn" style="color:white">Picture</a></p>
+            </div>
+            <div class="col col-50 twobaractive" ng-if="!oneOn">
+                <p>Picture</p>
+            </div>
+        </div>
+    </div>
+        <div ng-if="oneOn">
+          <!-- General settings -->
+          <ul class="list">
+              <li class="item" ng-repeat="i in playlists[lastChar-1].race">
+                {{i}} 
+              </li>
+          </ul>
+
+
+          <!-- <div class="row repeated-day-picker">
+            <div class="col" ng-repeat="day in playlists[lastChar-1].repeatedDays track by $index">
+              <div class="day-button" ng-class="(day ? 'day-positive' : 'day-negative')" ng-click="toggleRepeatedDay($index)">
+                {{daysOfWeekShort[$index]}}
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+
+        <div ng-if="!oneOn">
+          <!-- Location settings -->
+          <img src="{{playlists[lastChar-1].face}}" style="width:90%; margin-left:5%; margin-top:10px; border-radius:10px;">
+        </div>
+
+        <ion-spinner icon="lines" class="loading-spinner" ng-show="loading"></ion-spinner>
+
+  </ion-content>
+ 
+</ion-view>
