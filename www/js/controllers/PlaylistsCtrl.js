@@ -117,7 +117,8 @@ angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth', 'oauth.uber']
       };
 
       Camera.getPicture(options).then(function(imageData) {
-         $scope.picture = imageData;;
+         $scope.picture = imageData;
+          $scope.photoNumber++
       }, function(err) {
          console.log(err);
       });
