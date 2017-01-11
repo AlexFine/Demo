@@ -33,17 +33,17 @@
             <p class="newtext">
                 <b><u>Key Facts</u></b>
                 <ul class="list" style="margin-top:0px;">
-                    
+
               <li class="newitem" ng-repeat="i in playlists[lastChar-1].race">
-                • {{i}} 
+                • {{i}}
               </li>
           </ul>
-            
+
             </p>
             <hr>
           <p class="newtext">
-                
-            See a more thorough analysis at <u>http://quillapp.io/943462</u>.
+
+            See a more thorough analysis at <u ng-click="openLink(lastChar-1)">http://quillapp.io/943462</u>.
             </p>
 
 
@@ -65,5 +65,5 @@
         <ion-spinner icon="lines" class="loading-spinner" ng-show="loading"></ion-spinner>
 
   </ion-content>
- 
+
 </ion-view>

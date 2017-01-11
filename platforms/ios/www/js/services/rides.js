@@ -78,7 +78,7 @@ angular.module('ridesService', ['ionic'])
         repeatedDays: [false, false, false, false, false, false, false],
         image: 'img/text5.png',
         face: 'img/oliver.jpg',
-        dropoff: 'The Contennial Commission preferred to present the Civil War as, in essence, a kind of colorful and good-natured regional athletic rivalry between two groups of freedom-loving white Americans. Americans of all regions and political persuasions invoked imagery of the Civil War - to illustrate what divided rather than united the nation. ',
+        dropoff: 'The Centennial Commission preferred to present the Civil War as, in essence, a kind of colorful and good-natured regional athletic rivalry between two groups of freedom-loving white Americans. Americans of all regions and political persuasions invoked imagery of the Civil War - to illustrate what divided rather than united the nation. ',
         pickup: '01/09/2016',
         race: ["In 1959 Contennial Commission director Betts said 'We're not emphasizing Emancipation'", 'There were messy political issues in 1960.', 'Musketry and artillery caused the death and dismemberment of hundreds of thousands of Americans between 1861 and 1865.'],
 				key: 'ABCDEFG'

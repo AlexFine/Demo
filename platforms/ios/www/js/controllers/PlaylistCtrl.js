@@ -1,7 +1,7 @@
 // console.log("Playlist Ctrl Loaded"); // Debugging
 angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'ionic-timepicker', 'ionic-datepicker'])
 .controller('PlaylistCtrl', function($scope, $ionicPopup, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker, reverseGeocode, geocodeAddress, $http, $state) {
-   
+
   // Test reverse geocoding
   reverseGeocode(34.07636433, -118.4290661);
   geocodeAddress("Salesforce Tower, San Francisco, CA 94105");
@@ -11,6 +11,9 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
 
   // For tabs
   $scope.oneOn = true;
+  $scope.openLink= function(id){
+    var ref = cordova.InAppBrowser.open('https://quillapp.io/app/#/note/5649874456412160', '_blank', 'location=yes');
+  }
   $scope.toggleTab = function(){
       $scope.oneOn = !$scope.oneOn;
       console.log("Toggling");
@@ -19,9 +22,9 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
   // Identifying which page
   $scope.currentpage = window.location.href;
   var currentpage = window.location.href;
-  
+
     if(currentpage.charAt(currentpage.length - 2) != '/'){
-        var secondChar = currentpage.charAt(currentpage.length - 2); 
+        var secondChar = currentpage.charAt(currentpage.length - 2);
         var finalChar = currentpage.charAt(currentpage.length - 1);
         var lastChar = secondChar.concat(finalChar)
     }
