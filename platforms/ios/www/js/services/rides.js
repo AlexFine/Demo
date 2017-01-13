@@ -66,8 +66,8 @@ angular.module('ridesService', ['ionic'])
         face: 'img/xio.jpg',
         dropoff: 'The close relationship between Israel and the United States was born out of Cold War tensions projected onto the regional conflict in the Middle East. The U.S., implementing its policy of containment at the time, was competing with the Soviet Union for influence in regions around the world.',
         pickup: '01/06/2016',
-        race: ['Congress approved the most recent special aid package in 1998', 'In 1985, Congress approved a $1.5 billion emergency package to help Israel', 'U.S. provided Israel with a military loan of $545 million'], 
-
+        race: ['Congress approved the most recent special aid package in 1998', 'In 1985, Congress approved a $1.5 billion emergency package to help Israel', 'U.S. provided Israel with a military loan of $545 million'],
+        image2: "us.png",
 				key: 'ABCDEFG'
       },
       {
@@ -81,7 +81,8 @@ angular.module('ridesService', ['ionic'])
         dropoff: 'The Centennial Commission preferred to present the Civil War as, in essence, a kind of colorful and good-natured regional athletic rivalry between two groups of freedom-loving white Americans. Americans of all regions and political persuasions invoked imagery of the Civil War - to illustrate what divided rather than united the nation. ',
         pickup: '01/09/2016',
         race: ["In 1959 Contennial Commission director Betts said 'We're not emphasizing Emancipation'", 'There were messy political issues in 1960.', 'Musketry and artillery caused the death and dismemberment of hundreds of thousands of Americans between 1861 and 1865.'],
-				key: 'ABCDEFG'
+				key: 'ABCDEFG',
+        image2: "1960.png"
       },
       {
         time: 'The New Feminism',
